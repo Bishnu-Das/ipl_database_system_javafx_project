@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClubClick" prefHeight="84.0" prefWidth="612.0" styleClass="club-list-item" stylesheets="@../cssFiles/clubListItem.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComponentController.ClubListItemController">
+   <children>
+      <HBox prefHeight="84.0" prefWidth="180.0" styleClass="club-image-container">
+         <children>
+            <ImageView fx:id="clubImage" fitHeight="85.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <HBox prefHeight="84.0" prefWidth="21.0" />
+      <Label fx:id="clubName" prefHeight="84.0" prefWidth="285.0" styleClass="club-name" text="Kolkata Knight Riders">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</HBox>

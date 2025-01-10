@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="537.0" styleClass="pane" stylesheets="@clubDetail.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComponentController.sellPlayerController">
+   <children>
+      <ScrollPane layoutY="74.0" prefHeight="368.0" prefWidth="537.0" styleClass="scroll-pane">
+         <content>
+            <VBox fx:id="plyerList" onMouseClicked="#VboxClickedForDelete" prefHeight="358.0" prefWidth="538.0" style="-fx-background-color: linear-gradient(to right, #3a7bd5, #2a5298); -fx-padding: 10px; -fx-spacing: 10px;" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="161.0" layoutY="14.0" prefHeight="47.0" prefWidth="215.0" styleClass="club-name" text="Sell Player" />
+   </children>
+</Pane>

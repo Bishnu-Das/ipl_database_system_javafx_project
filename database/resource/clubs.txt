@@ -1,0 +1,7 @@
+Mumbai Indians,mi
+Gujarat Titans,gt
+Delhi Capitals,dc
+Rajasthan Royals,rr
+Royal Challengers Bangalore,rcb
+Kolkata Knight Riders,kkr
+Chennai Super Kings,csk

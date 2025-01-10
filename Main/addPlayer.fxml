@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.addPlayerController">
+   <children>
+      <Pane layoutX="-4.0" layoutY="-2.0" prefHeight="602.0" prefWidth="255.0">
+         <children>
+            <Button layoutX="29.0" layoutY="387.0" mnemonicParsing="false" onAction="#addPlayerButtonClicked" prefHeight="52.0" prefWidth="186.0" text="ADD PLAYERS" />
+            <Button layoutX="29.0" layoutY="235.0" mnemonicParsing="false" onAction="#playerButtonClicked" prefHeight="52.0" prefWidth="186.0" text="PLAYERS" />
+            <Button layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onAction="#clubsButtonClicked" prefHeight="52.0" prefWidth="186.0" text="CLUBS" />
+            <Button layoutX="29.0" layoutY="152.0" mnemonicParsing="false" onAction="#homeButtonClicked" prefHeight="52.0" prefWidth="186.0" text="HOME" />
+            <Button layoutX="30.0" layoutY="465.0" mnemonicParsing="false" onAction="#myClubButtonClicked" prefHeight="52.0" prefWidth="186.0" text="MY CLUB" />
+         </children>
+      </Pane>
+      <TextField fx:id="playerNameField" layoutX="480.0" layoutY="152.0" prefHeight="31.0" prefWidth="235.0" promptText="Enter name" />
+      <Label layoutX="309.0" layoutY="156.0" text="NAME" />
+      <TextField fx:id="playerCountryField" layoutX="480.0" layoutY="190.0" maxWidth="235.0" prefHeight="31.0" prefWidth="235.0" promptText="Enter country" />
+      <Label layoutX="309.0" layoutY="194.0" text="COUNTRY" />
+      <TextField fx:id="playerAgeField" layoutX="480.0" layoutY="229.0" prefWidth="235.0" promptText="enter age" />
+      <Label layoutX="309.0" layoutY="233.0" text="AGE" />
+      <TextField fx:id="playerHeightField" layoutX="480.0" layoutY="267.0" prefWidth="235.0" promptText="enter height" />
+      <Label layoutX="309.0" layoutY="271.0" text="HEIGHT" />
+      <TextField fx:id="playerClubField" layoutX="480.0" layoutY="304.0" prefWidth="235.0" promptText="enter club name" />
+      <Label layoutX="309.0" layoutY="308.0" text="CLUB" />
+      <TextField fx:id="playerPositionField" layoutX="480.0" layoutY="342.0" prefHeight="31.0" prefWidth="235.0" promptText="enter position" />
+      <Label layoutX="309.0" layoutY="346.0" text="POSITION" />
+      <TextField fx:id="playerNoField" layoutX="480.0" layoutY="381.0" prefHeight="31.0" prefWidth="235.0" promptText="enter jersy number (-1 if not known)" />
+      <Label layoutX="309.0" layoutY="385.0" text="JERSEY NUMBER" />
+      <TextField fx:id="playerSalaryField" layoutX="480.0" layoutY="420.0" prefHeight="31.0" prefWidth="235.0" promptText="enter weekly salary" />
+      <Label layoutX="309.0" layoutY="424.0" text="WEEKLY SALARY" />
+      <Button layoutX="453.0" layoutY="489.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="SAVE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main.Main",
+            "projectName": "ipl_database_system_javafx_project_dd95632f",
+            "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "Server",
+            "request": "launch",
+            "mainClass": "Network.Server",
+            "projectName": "ipl_database_system_javafx_project_dd95632f",
+            "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main.Main",
+            "projectName": "ipl_database_system_805dd37e",
+            "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "Server",
+            "request": "launch",
+            "mainClass": "Network.Server",
+            "projectName": "ipl_database_system_805dd37e",
+            "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
+        }
+    ]
+}

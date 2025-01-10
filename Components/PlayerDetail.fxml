@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="602.0" style="-fx-background-radius: 0;" styleClass="pane" stylesheets="@playerDetail.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComponentController.PlayerDetailController">
+   <children>
+      <Pane layoutX="36.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10;">
+         <children>
+            <ImageView fx:id="playerImage" styleClass="player-image" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      
+      <Label fx:id="nameLabel" layoutX="264.0" layoutY="22.0" prefHeight="68.0" prefWidth="348.0" styleClass="label" text="NAME">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      
+      <HBox layoutX="247.0" layoutY="88.0" prefHeight="35.0" prefWidth="305.0" styleClass="hbox">
+         <children>
+            <ImageView fx:id="countryImage" styleClass="country-image" />
+            <Label fx:id="countryLabel" prefHeight="35.0" prefWidth="131.0" styleClass="country-label" text="Country" />
+         </children>
+      </HBox>
+      
+      <VBox layoutX="277.0" layoutY="148.0" prefHeight="290.0" prefWidth="319.0" styleClass="vbox-info">
+         <children>
+            <Label fx:id="positionLabel" prefHeight="34.0" prefWidth="286.0" styleClass="label" text="Position" />
+            <Label fx:id="heightLabel" prefHeight="34.0" prefWidth="286.0" styleClass="label" text="Height :" />
+            <Label fx:id="jerseyNoLabel" prefHeight="34.0" prefWidth="286.0" styleClass="label" text="Jersey No: " />
+            <Label fx:id="ageLabel" prefHeight="34.0" prefWidth="286.0" styleClass="label" text="Age: " />
+            <Label fx:id="salaryLabel" prefHeight="34.0" prefWidth="286.0" styleClass="salary-label" text="Salary: " />
+         </children>
+      </VBox>
+      
+      <VBox layoutY="222.0" prefHeight="207.0" prefWidth="271.0" styleClass="vbox-club">
+         <children>
+            <ImageView fx:id="clubImageLabel" fitHeight="92.0" fitWidth="134.0" styleClass="club-image" />
+            <Label fx:id="clubNameLabel" prefHeight="42.0" prefWidth="244.0" styleClass="club-name-label" text="Club Name">
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>
