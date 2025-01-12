@@ -29,7 +29,7 @@
       <Label layoutX="309.0" layoutY="308.0" text="CLUB" />
       <TextField fx:id="playerPositionField" layoutX="480.0" layoutY="342.0" prefHeight="31.0" prefWidth="235.0" promptText="enter position" />
       <Label layoutX="309.0" layoutY="346.0" text="POSITION" />
-      <TextField fx:id="playerNoField" layoutX="480.0" layoutY="381.0" prefHeight="31.0" prefWidth="235.0" promptText="enter jersy number (-1 if not known)" />
+      <TextField fx:id="playerNoField" layoutX="480.0" layoutY="381.0" prefHeight="31.0" prefWidth="235.0" promptText="enter jersy number or keep blank" />
       <Label layoutX="309.0" layoutY="385.0" text="JERSEY NUMBER" />
       <TextField fx:id="playerSalaryField" layoutX="480.0" layoutY="420.0" prefHeight="31.0" prefWidth="235.0" promptText="enter weekly salary" />
       <Label layoutX="309.0" layoutY="424.0" text="WEEKLY SALARY" />

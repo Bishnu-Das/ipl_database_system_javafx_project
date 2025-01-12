@@ -64,6 +64,10 @@ public class PlayerDetailController {
     }
 
     public void setPlayerJerseyNumber(String jerseyNumber) {
+        if(jerseyNumber.equals("-1")){
+            this.jerseyNoLabel.setText("Jersey Number: Unknown");
+            return;
+        }
         this.jerseyNoLabel.setText("Jersey Number: " + jerseyNumber);
     }
 
