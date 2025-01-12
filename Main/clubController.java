@@ -7,6 +7,7 @@ import database.Club;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -84,4 +85,15 @@ public class clubController {
             }
         }
     }
+    @FXML
+    private Button addPlayerButton;
+
+    @FXML
+    private Button myClubButton;
+
+    void setInvisibleMyClubAndAddPlayer(){
+        addPlayerButton.setVisible(false);
+        myClubButton.setVisible(false);
+    }
+
 }

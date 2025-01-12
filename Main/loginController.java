@@ -1,5 +1,7 @@
 package Main;
 
+import java.io.IOException;
+
 import Network.Client;
 import database.Club;
 import javafx.event.ActionEvent;
@@ -48,6 +50,21 @@ public class loginController {
 
         }
     }
+    @FXML
+    void continueAsGuestButtoClicked(ActionEvent event) throws IOException{
+        if(main!=null){
+            String ip = "127.0.0.1";
+            int port = 44444;
+            client = new Client(ip, port, main);
+            if(client!=null){
+                main.setClient(client);
+            }
+            boolean status =  client.sendLoginRequestAsGuest();
+            if(status){
+                main.showHomeScreenScene();
+            }
+        }
+    }
 
     public void showPrompt(String message) {
         Alert alert = new Alert(AlertType.INFORMATION);
@@ -59,10 +76,7 @@ public class loginController {
         alert.showAndWait();
     }
 
-    @FXML
-    void resetButtonClicked(ActionEvent event) {
-
-    }
+    
 
     @FXML
     void exitButtonClicked(ActionEvent event) {

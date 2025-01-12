@@ -45,7 +45,10 @@ public class ClientHandler implements Runnable {
         synchronized (appData) {
             if (ob instanceof LoginRequest login) {// done
                 handleLoginRequest(login);
-            } else if (ob instanceof SearchByNameRequest search) {
+            } else if(ob instanceof LoginRequestGuest login){
+                handleLoginRequestGuest(login);
+            }
+             else if (ob instanceof SearchByNameRequest search) {
                 socketWrapper.write(new SearchByNameRequest(search.getRequestId(), null,
                         appData.getPlayerMangement().searchByName(search.getName())));
             } else if (ob instanceof SearchByClubAndCountryRequest search) {
@@ -115,6 +118,12 @@ public class ClientHandler implements Runnable {
         } else {
             socketWrapper.write(new LoginRequest(username, password, requestId, null, null, null, null));
         }
+    }
+    private void handleLoginRequestGuest(LoginRequestGuest login) throws IOException{
+        String requestId = login.getRequestId();
+        List<Player> allPlayers = appData.getAllPlayers();
+        List<Club> allClubs = appData.getAllClubs();
+        socketWrapper.write(new LoginRequestGuest(requestId,allClubs,allPlayers));
     }
 
     private void handleChangePasswordRequest(RequestChangePassword ob2) throws IOException {

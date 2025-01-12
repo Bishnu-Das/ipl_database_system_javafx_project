@@ -9,7 +9,6 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Main.Main",
-            "projectName": "ipl_database_system_javafx_project_dd95632f",
             "vmArgs": " --module-path c:\\javafx-sdk-22.0.2\\lib --add-modules javafx.fxml,javafx.controls,javafx.graphics"
         },
         {

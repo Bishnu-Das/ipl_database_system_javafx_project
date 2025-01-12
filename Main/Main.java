@@ -82,6 +82,9 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("player.fxml"));
             Parent root = loader.load();
             PlayerController controller = loader.getController();
+            if(myClub==null){
+                Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+            }
             controller.setMain(this);
             controller.loadPlayer();
             Scene scene = new Scene(root, 1000, 600);
@@ -98,6 +101,9 @@ public class Main extends Application {
         Parent root = loader.load();
         clubController controller = loader.getController();
         controller.setMain(this);
+        if(myClub==null){
+            Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+        }
 
         controller.loadClub();
         Scene scene = new Scene(root, 1000, 600);
@@ -112,6 +118,9 @@ public class Main extends Application {
         loader.setLocation(getClass().getResource("home.fxml"));
         Parent root = loader.load();
         homeController controller = loader.getController();
+        if(myClub==null){
+            Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+        }
         controller.setMain(this);
         mainStage.setScene(new Scene(root, 1000, 600));
         mainStage.show();
@@ -160,6 +169,7 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("/Components/PlayerDetail.fxml"));
         Parent root = loader.load();
         PlayerDetailController controller = loader.getController();
+        
         controller.setPlayerName(player.getName());
         controller.setPlayerPosition(player.getPosition());
         controller.setPlayerHeight(String.valueOf(player.getHeight()));

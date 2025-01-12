@@ -3,9 +3,12 @@ package Main;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class homeController {
     private Main main;
+
+
 
     public void setMain(Main main) {
         this.main = main;
@@ -65,6 +68,17 @@ public class homeController {
             System.out.println("main not initialized!");
         }
         main.showLoginScene();
+    }
+
+    @FXML
+    private Button addPlayerButton;
+
+    @FXML
+    private Button myClubButton;
+
+    void setInvisibleMyClubAndAddPlayer(){
+        addPlayerButton.setVisible(false);
+        myClubButton.setVisible(false);
     }
 
 }
