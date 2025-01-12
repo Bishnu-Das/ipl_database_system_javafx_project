@@ -22,14 +22,14 @@ Pat Cummins,Australia,31,1.92,Delhi Capitals,Bowler,30,17500000
 Sanju Samson,India,30,1.79,Rajasthan Royals,Wicketkeeper,9,17000000
 Marcus Stoinis,Australia,35,1.85,Lucknow Super Giants,Allrounder,17,17500000
 Deepak Chahar,India,32,1.79,Chennai Super Kings,Bowler,-1,15000000
-Kuldeep Yadav,India,29,1.74,none,Bowler,23,15000000
+Kuldeep Yadav,India,29,1.74,Kolkata Knight Riders,Bowler,23,15000000
 Quinton de Kock,South Africa,31,1.70,Lucknow Super Giants,Wicketkeeper,12,16000000
 Trent Boult,New Zealand,35,1.85,Rajasthan Royals,Bowler,18,17500000
 Shivam Dube,India,31,1.83,Chennai Super Kings,Allrounder,25,13000000
 Kane Williamson,New Zealand,34,1.83,Gujarat Titans,Batsman,22,16000000
 Shikhar Dhawan,India,38,1.80,Punjab Kings,Batsman,42,17000000
 Kagiso Rabada,South Africa,29,1.91,Punjab Kings,Bowler,-1,19000000
-Axar Patel,India,30,1.83,none,Allrounder,-1,17500000
+Axar Patel,India,30,1.83,Kolkata Knight Riders,Allrounder,-1,17500000
 Mitchell Marsh,Australia,33,1.91,Kolkata Knight Riders,Allrounder,-1,18000000
 Dinesh Karthik,India,39,1.70,Royal Challengers Bangalore,Wicketkeeper,21,16000000
 Ruturaj Gaikwad,India,27,1.78,Chennai Super Kings,Batsman,31,15000000

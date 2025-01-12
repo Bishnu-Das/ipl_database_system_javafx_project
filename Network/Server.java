@@ -17,6 +17,13 @@ public class Server {
         this.appData = new AppData();
         this.buyablePlayers = new ArrayList<>();
         this.connections = new ArrayList<>();
+
+        for(Player player:appData.getAllPlayers()){
+            if(player.getClub().equals("none")){
+                buyablePlayers.add(player);
+            }
+        }
+
         try {
             this.serverSocket = new ServerSocket(44444);
             System.out.println("Server started...");

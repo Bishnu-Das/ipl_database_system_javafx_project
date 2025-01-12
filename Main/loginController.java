@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class loginController {
@@ -19,6 +20,9 @@ public class loginController {
     public void setMain(Main main) {
         this.main = main;
     }
+    
+    @FXML
+    private Label wrongCredential;
 
     @FXML
     private PasswordField passwordField;
@@ -45,7 +49,7 @@ public class loginController {
                 main.setMyClub(clubOb);
                 return;
             } else if (clubOb == null) {
-                showPrompt("Invalid username or password..");
+                wrongCredential.setVisible(true);
             }
 
         }

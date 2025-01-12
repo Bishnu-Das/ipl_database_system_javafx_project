@@ -1,0 +1,119 @@
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #6e45e2, #8d58e5, #a16fe8);
+}
+
+.pane {
+    -fx-background-color: linear-gradient(to bottom, #6e45e2, #8d58e5, #a16fe8);
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 20, 0.2, 0, 8);
+    -fx-padding: 30px;
+    -fx-border-radius: 25px;
+    -fx-border-color: #d3c2ff;
+    -fx-border-width: 2px;
+    -fx-opacity: 0.95;
+}
+
+.pane:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 20, 0.3, 0, 10);
+    -fx-background-color: linear-gradient(to bottom, #6e45e2, #8d58e5, #b78df3); /* Slightly lighter gradient on hover */
+}
+
+.pane:pressed {
+    -fx-background-color: linear-gradient(to bottom, #4f2a99, #6b45a2, #8361c8); /* Darker gradient on press */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 12, 0.2, 0, 6);
+}
+
+
+.title {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 20px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 3);
+}
+
+
+/* Styling for the TextField and PasswordField */
+.text-field, .password-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2px 0; /* Only bottom border is visible */
+    -fx-border-color: white;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #d3c2ff; /* Light purple on focus */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 5, 0.3, 0, 2);
+}
+
+/* Styling for the Login Button */
+.button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-border-color: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0.2, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #6e45e2, #8d58e5, #a16fe8);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom,  #6541ca, #8453d3, #895fc5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 1);
+}
+
+/* Styling for 'Remember me' and 'Forgot Password?' */
+.check-box, .hyperlink {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-opacity: 0.9;
+}
+
+.check-box:hover, .hyperlink:hover {
+    -fx-opacity: 1.0;
+}
+
+/* Styling for the 'EXIT' Button */
+.exitButton {
+    -fx-background-color: linear-gradient(to bottom, #8e461f, #5f2d12);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px 20px;
+    -fx-cursor: hand;
+    -fx-border-color: #43200d;
+    -fx-border-width: 2px;
+}
+
+.exitButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #a35423, #6f3818);
+    -fx-text-fill: #ffe6d5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0.3, 0, 3);
+}
+
+.exitButton:pressed {
+    -fx-background-color: linear-gradient(to bottom, #6f3818, #4c200e);
+    -fx-text-fill: #e6ccb3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0.2, 0, 1);
+}
+
+/* Additional Styling for alignment */
+.text-field, .password-field {
+    -fx-border-radius: 0px; /* Flat borders for a clean look */
+}
+.title{
+
+}
