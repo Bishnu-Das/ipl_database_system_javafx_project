@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 public class homeController {
     private Main main;
@@ -13,6 +14,8 @@ public class homeController {
     public void setMain(Main main) {
         this.main = main;
     }
+    @FXML
+    private Button logoutButton;
 
     @FXML
     public void playerButtonClicked(ActionEvent actionEvent) throws Exception {
@@ -67,6 +70,11 @@ public class homeController {
         } else {
             System.out.println("main not initialized!");
         }
+        main.setAllPlayerList(null);
+        main.setClient(null);
+        main.setMyClub(null);
+        main.allClubs = null;
+        main.buyablePlayer = null;
         main.showLoginScene();
     }
 
@@ -75,10 +83,17 @@ public class homeController {
 
     @FXML
     private Button myClubButton;
+    @FXML
+    private ImageView myClubImage;
+    @FXML
+    private ImageView addPlayerImage;
 
     void setInvisibleMyClubAndAddPlayer(){
         addPlayerButton.setVisible(false);
         myClubButton.setVisible(false);
+    }
+    public void changeLogoutText(){
+        logoutButton.setText("LOGIN PAGE");
     }
 
 }

@@ -1,6 +1,7 @@
 package Main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -177,24 +179,12 @@ public class PlayerController {
     public void searchPlayers(String playerName) throws IOException {
         playerList.getChildren().clear();
         Player currentPlayer = main.client.sendSearchByNameRequest(playerName);
+        List<Player> players = new ArrayList<>();
+        players.add(currentPlayer);
 
         if (currentPlayer == null) {
         } else {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(PlayerController.class.getResource("/Components/PlayerListItem.fxml"));
-                HBox listItem = fxmlLoader.load();
-                PlayerListItemController playerListItemController = fxmlLoader.getController();
-                playerListItemController.setPlayer(currentPlayer);
-                playerListItemController.setPlayerName(currentPlayer.getName());
-                playerListItemController.setPlayerPosition(currentPlayer.getPosition());
-                playerListItemController.setPlayerNumber(currentPlayer.getNumber());
-                playerListItemController.setCountryImage(currentPlayer.getCountry());
-                playerList.getChildren().add(listItem);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+            showPlayerInVbox(players, playerList);
         }
     }
 
@@ -202,27 +192,7 @@ public class PlayerController {
         playerList.getChildren().clear();
         List<Player> players;
         players = main.client.sendSearchByClubAndCountryRequest(Club, Country);
-
-        for (int i = 0; i < players.size(); i++) {
-            Player currPlayer = players.get(i);
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/Components/PlayerListItem.fxml"));
-                HBox listItem = fxmlLoader.load();
-                PlayerListItemController playerListItemController = fxmlLoader.getController();
-                playerListItemController.setPlayer(currPlayer);
-                playerListItemController.setPlayerName(currPlayer.getName());
-                playerListItemController.setPlayerNumber(currPlayer.getNumber());
-                playerListItemController.setPlayerPosition(currPlayer.getPosition());
-                playerListItemController.setCountryImage(currPlayer.getCountry().toLowerCase());
-
-                playerList.getChildren().add(listItem);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
+        showPlayerInVbox(players, playerList);
     }
 
     public void searchPosition2(String position) throws IOException {
@@ -230,26 +200,7 @@ public class PlayerController {
         playerList.getChildren().clear();
         List<Player> players;
         players = main.client.sendSearchByPositionRequest(position);
-        for (int i = 0; i < players.size(); i++) {
-            Player currPlayer = players.get(i);
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/Components/PlayerListItem.fxml"));
-                HBox listItem = fxmlLoader.load();
-
-                PlayerListItemController playerListItemController = fxmlLoader.getController();
-                playerListItemController.setPlayer(currPlayer);
-                playerListItemController.setPlayerName(currPlayer.getName());
-                playerListItemController.setPlayerNumber(currPlayer.getNumber());
-                playerListItemController.setPlayerPosition(currPlayer.getPosition());
-                playerListItemController.setCountryImage(currPlayer.getCountry());
-
-                playerList.getChildren().add(listItem);
-            } catch (IOException e) {
-                // ("not loading player");
-                e.printStackTrace();
-            }
-        }
+       showPlayerInVbox(players, playerList);
     }
 
     public void searchSlaryRange(String minSalary, String maxSalary) throws NumberFormatException, IOException {
@@ -257,23 +208,7 @@ public class PlayerController {
         List<Player> players;
         players = main.client.sendSearchBySalaryRequest(Integer.parseInt(minSalary), Integer.parseInt(maxSalary));
 
-        for (int i = 0; i < players.size(); i++) {
-            Player currPlayer = players.get(i);
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/Components/PlayerListItem.fxml"));
-                HBox listItem = fxmlLoader.load();
-                PlayerListItemController playerListItemController = fxmlLoader.getController();
-                playerListItemController.setPlayer(currPlayer);
-                playerListItemController.setPlayerName(currPlayer.getName());
-                playerListItemController.setPlayerNumber(currPlayer.getNumber());
-                playerListItemController.setPlayerPosition(currPlayer.getPosition());
-                playerListItemController.setCountryImage(currPlayer.getCountry());
-                playerList.getChildren().add(listItem);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        showPlayerInVbox(players, playerList);
     }
 
     public void countryWisePlayerCount() throws IOException {
@@ -295,51 +230,52 @@ public class PlayerController {
 
     public void loadPlayer() {
         playerList.getChildren().clear();
-        // main.client.sendAllPlayerRequest();
         players = main.getAllPlayers();
         if (players == null) {
             System.out.println("players null in main...");
             return;
         }
-        try {
-            if (main.client != null) {
-                // players = main.client.sentAllPlayerRequest();
-                // players = main.
-                // main.setAllPlayerList(players);
-            } else {
-                return;
-            }
-            for (int i = 0; i < players.size(); i++) {
-                Player currPlayer = players.get(i);
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("/Components/PlayerListItem.fxml"));
-                    HBox listItem = fxmlLoader.load();
-                    PlayerListItemController playerListItemController = fxmlLoader.getController();
-                    playerListItemController.setPlayer(currPlayer);
-                    playerListItemController.setPlayerName(currPlayer.getName());
-                    playerListItemController.setPlayerNumber(currPlayer.getNumber());
-                    playerListItemController.setPlayerPosition(currPlayer.getPosition());
-                    playerListItemController.setCountryImage(currPlayer.getCountry());
-
-                    playerList.getChildren().add(listItem);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        showPlayerInVbox(players, playerList);
     }
+    
     @FXML
     private Button addPlayerButton;
 
     @FXML
     private Button myClubButton;
+     @FXML
+    private ImageView myClubImage;
+    @FXML
+    private ImageView addPlayerImage;
 
-    void setInvisibleMyClubAndAddPlayer(){
+    void setInisibleMyClubAndAddPlayer(){
         addPlayerButton.setVisible(false);
         myClubButton.setVisible(false);
+        myClubImage.setVisible(false);
+        addPlayerImage.setVisible(false);
+    }
+
+    void showPlayerInVbox(List<Player> players, VBox playerList){
+        for (int i = 0; i < players.size(); i++) {
+            Player currPlayer = players.get(i);
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/Components/PlayerListItem.fxml"));
+                HBox listItem = fxmlLoader.load();
+
+                PlayerListItemController playerListItemController = fxmlLoader.getController();
+                playerListItemController.setPlayer(currPlayer);
+                playerListItemController.setPlayerName(currPlayer.getName());
+                playerListItemController.setPlayerNumber(currPlayer.getNumber());
+                playerListItemController.setPlayerPosition(currPlayer.getPosition());
+                playerListItemController.setCountryImage(currPlayer.getCountry());
+
+                playerList.getChildren().add(listItem);
+            } catch (IOException e) {
+                // ("not loading player");
+                e.printStackTrace();
+            }
+        }
     }
 
 }

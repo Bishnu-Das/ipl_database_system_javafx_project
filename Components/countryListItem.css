@@ -35,3 +35,13 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 15, 0.2, 0, 6);
     -fx-cursor: hand;
 }
+
+.flagImage {
+    -fx-preserve-ratio: false;
+    -fx-max-width: 50px;   /* Fixed width */
+    -fx-max-height: 35px;  /* Fixed height */
+    -fx-min-width: 50px;   /* Fixed width */
+    -fx-min-height: 35px;  /* Fixed height */
+    -fx-fit-to-width: true; /* Ensures the image scales to fit */
+    -fx-fit-to-height: true; /* Ensures the image scales to fit */
+}

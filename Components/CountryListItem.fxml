@@ -4,35 +4,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox stylesheets="@CountryListItem.css" 
-      maxHeight="-Infinity" 
-      maxWidth="-Infinity" 
-      minHeight="-Infinity" 
-      minWidth="-Infinity" 
-      prefHeight="71.0" 
-      prefWidth="522.0" 
-      xmlns="http://javafx.com/javafx/22" 
-      xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="ComponentController.CountryListItemController"
-      styleClass="country-list-item">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="522.0" styleClass="country-list-item" stylesheets="@CountryListItem.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComponentController.CountryListItemController">
    <children>
-      <HBox prefHeight="80.0" prefWidth="153.0">
+      <HBox prefHeight="58.0" prefWidth="130.0">
          <HBox.margin>
             <Insets />
          </HBox.margin>
          <children>
-            <ImageView fx:id="countryImage" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" /> <!-- Ensured equal size for all images -->
+            <Pane prefHeight="43.0" prefWidth="37.0" />
+            <ImageView fx:id="countryImage" fitHeight="43.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" styleClass="flagImage" /> <!-- Ensured equal size for all images -->
          </children>
       </HBox>
-      <HBox prefHeight="71.0" prefWidth="62.0" />
+      <HBox prefHeight="41.0" prefWidth="55.0" />
       <HBox prefHeight="71.0" prefWidth="120.0">
          <children>
             <VBox prefHeight="71.0" prefWidth="126.0" styleClass="vbox-country">
                <children>
-                  <Label fx:id="countryName" prefHeight="70.0" prefWidth="176.0" text="Bangladesh" styleClass="country-name">
+                  <Label fx:id="countryName" prefHeight="70.0" prefWidth="176.0" styleClass="country-name" text="Bangladesh">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -41,7 +33,7 @@
             </VBox>
          </children>
       </HBox>
-      <Label fx:id="noOfPlayer" prefHeight="70.0" prefWidth="152.0" text="7" textAlignment="CENTER" styleClass="no-of-players">
+      <Label fx:id="noOfPlayer" prefHeight="70.0" prefWidth="152.0" styleClass="no-of-players" text="7" textAlignment="CENTER">
          <font>
             <Font size="40.0" />
          </font>

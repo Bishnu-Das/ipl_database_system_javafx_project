@@ -5,7 +5,7 @@ Ravindra Jadeja,India,35,1.73,Chennai Super Kings,Allrounder,8,16500000
 David Warner,Australia,37,1.70,Delhi Capitals,Batsman,31,15000000
 Jasprit Bumrah,India,30,1.78,Mumbai Indians,Bowler,93,17500000
 MS Dhoni,India,43,1.78,Chennai Super Kings,Wicketkeeper,7,20000000
-Andre Russell,West Indies,36,1.88,Kolkata Knight Riders,Allrounder,-1,18000000
+Andre Russell,West Indies,36,1.88,none,Allrounder,-1,18000000
 Rohit Sharma,India,37,1.74,Mumbai Indians,Batsman,45,19000000
 Glenn Maxwell,Australia,35,1.82,Royal Challengers Bangalore,Allrounder,32,18500000
 Shubman Gill,India,25,1.78,Gujarat Titans,Batsman,77,15000000

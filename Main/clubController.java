@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -90,8 +91,13 @@ public class clubController {
 
     @FXML
     private Button myClubButton;
+    @FXML
+    private ImageView myClubImage;
+    @FXML
+    private ImageView addPlayerImage;
 
-    void setInvisibleMyClubAndAddPlayer(){
+
+    void setInisibleMyClubAndAddPlayer(){
         addPlayerButton.setVisible(false);
         myClubButton.setVisible(false);
     }

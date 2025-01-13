@@ -78,21 +78,19 @@ public class Main extends Application {
     }
 
     public void showPlayerScene() throws Exception {
-        if (!sceneCache.containsKey("player")) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("player.fxml"));
             Parent root = loader.load();
             PlayerController controller = loader.getController();
             if(myClub==null){
-                Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+                Platform.runLater(()->controller.setInisibleMyClubAndAddPlayer());
             }
             controller.setMain(this);
             controller.loadPlayer();
             Scene scene = new Scene(root, 1000, 600);
             sceneCache.put("player", scene);
             controllerCache.put("player", controller);
-        }
-        mainStage.setScene(sceneCache.get("player"));
-        mainStage.show();
+            mainStage.setScene(sceneCache.get("player"));
+            mainStage.show();
     }
 
     public void showClubScene() throws Exception {
@@ -102,7 +100,7 @@ public class Main extends Application {
         clubController controller = loader.getController();
         controller.setMain(this);
         if(myClub==null){
-            Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+            Platform.runLater(()->controller.setInisibleMyClubAndAddPlayer());
         }
 
         controller.loadClub();
@@ -120,6 +118,7 @@ public class Main extends Application {
         homeController controller = loader.getController();
         if(myClub==null){
             Platform.runLater(()->controller.setInvisibleMyClubAndAddPlayer());
+            controller.changeLogoutText();
         }
         controller.setMain(this);
         mainStage.setScene(new Scene(root, 1000, 600));

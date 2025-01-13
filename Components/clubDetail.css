@@ -25,7 +25,7 @@
     -fx-text-fill: linear-gradient(to right, #1b3f83, #2a5298); /* Dark blue gradient */
     -fx-font-size: 32px;
     -fx-font-weight: bold;
-    -fx-font-family: 'Arial Black', Gadget, sans-serif;
+    -fx-font-family: 'Impact', Gadget, sans-serif;
     -ms-flex-align: center;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 4, 0.0, 2, 2); /* Shadow effect */
 }

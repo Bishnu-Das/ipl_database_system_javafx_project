@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -12,12 +14,47 @@
    <children>
       <Pane layoutX="-4.0" layoutY="-2.0" prefHeight="602.0" prefWidth="255.0">
          <children>
-            <Button layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onAction="#clubsButtonClicked" prefHeight="52.0" prefWidth="186.0" text="CLUBS" />  
-            <Button layoutX="29.0" layoutY="235.0" mnemonicParsing="false" onAction="#playerButtonClicked" prefHeight="52.0" prefWidth="186.0" text="PLAYERS" />
+            <Button layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onAction="#clubsButtonClicked" prefHeight="52.0" prefWidth="186.0" text="CLUBS">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon/society.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>  
+            <Button layoutX="29.0" layoutY="235.0" mnemonicParsing="false" onAction="#playerButtonClicked" prefHeight="52.0" prefWidth="186.0" text="PLAYERS">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon/athlete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             
-            <Button fx:id="addPlayerButton" layoutX="29.0" layoutY="387.0" mnemonicParsing="false" onAction="#addPlayerButtonClicked" prefHeight="52.0" prefWidth="186.0" text="ADD PLAYERS" />
-            <Button layoutX="29.0" layoutY="152.0" mnemonicParsing="false" onAction="#homeButtonClicked" prefHeight="52.0" prefWidth="186.0" text="HOME" />
-            <Button fx:id="myClubButton" layoutX="30.0" layoutY="465.0" mnemonicParsing="false" onAction="#myClubButtonClicked" prefHeight="52.0" prefWidth="186.0" text="MY CLUB" />
+            <Button fx:id="addPlayerButton" layoutX="29.0" layoutY="387.0" mnemonicParsing="false" onAction="#addPlayerButtonClicked" prefHeight="52.0" prefWidth="186.0" style="visibility: true;" text="ADD PLAYERS">
+               <graphic>
+                  <ImageView fx:id="addPlayerImage" fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon/add-user.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="29.0" layoutY="152.0" mnemonicParsing="false" onAction="#homeButtonClicked" prefHeight="52.0" prefWidth="186.0" text="HOME">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="myClubButton" layoutX="30.0" layoutY="465.0" mnemonicParsing="false" onAction="#myClubButtonClicked" prefHeight="52.0" prefWidth="186.0" style="visibility: true;" text="MY CLUB">
+               <graphic>
+                  <ImageView fx:id="myClubImage" fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon/society.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </Pane>
       <Pane layoutX="250.0" layoutY="131.0" prefHeight="455.0" prefWidth="646.0">
